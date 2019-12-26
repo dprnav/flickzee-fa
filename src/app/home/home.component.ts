@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router) { }
   searchCall(query){
-    this.router.navigate(['/search'], { queryParams: { query: query } });
+    this.router.navigate(['/search'], { queryParams: { query: query }, skipLocationChange: true });
   }
   ngOnInit() {
 
