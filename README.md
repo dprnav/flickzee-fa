@@ -1,0 +1,2 @@
+# flickzee-fa
+Angular App
