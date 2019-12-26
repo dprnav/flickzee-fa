@@ -1,0 +1,27 @@
+<div class="search-container">
+  <input #query type="text" name="search-str" class="search-box" id="search-str" placeholder="Search Movies" [value]="searchQuery"/>
+  <button (click)="search(query.value)" type="submit" class="search-btn"></button>
+</div>
+
+<div class="container">
+  <div *ngFor="let movie of movies" class="card">
+    <div class="card-body">
+      <b><p>{{movie.MovieName}}({{movie.Year}})</p></b>
+      <img src="assets\movie-image.jpg" alt="" class="movie-image">
+      <table>
+        <tr>
+          <td><h4>IMDB Rating </h4></td>
+          <td><h5>{{movie.IMDbRating}}</h5></td>
+        </tr>
+        <tr>
+          <td><h4>Language</h4></td>
+          <td><h5>{{movie.Language}}</h5></td>
+        </tr>
+        <tr>
+          <td><h4>Alt Text</h4></td>
+          <td><h5>{{movie.AltText}}</h5></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
